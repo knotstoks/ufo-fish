@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameMenu : MonoBehaviour
@@ -9,7 +7,7 @@ public class GameMenu : MonoBehaviour
 
     public void Pause()
     {
-        if(!isPaused)
+        if (!isPaused)
         {
             Time.timeScale = 0;
             isPaused = true;
@@ -24,7 +22,7 @@ public class GameMenu : MonoBehaviour
 
     public void Update()
     {
-        if(Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             Pause();
         }

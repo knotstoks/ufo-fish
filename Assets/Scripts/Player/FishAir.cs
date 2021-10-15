@@ -15,23 +15,16 @@ public class FishAir : MonoBehaviour
     private float airDecrement;
     private bool inWater = true;
     private bool inHazard = false;
-    
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
-        if(!inWater)
+        if (!inWater)
         {
             air -= Time.deltaTime;
         }
 
-        if(inHazard)
+        if (inHazard)
         {
             timer -= Time.deltaTime;
             if(timer < 0)
@@ -41,17 +34,17 @@ public class FishAir : MonoBehaviour
             }
         }
 
-        if(air < 0)
+        if (air < 0)
         {
             SceneManager.LoadScene(1);
         }
 
-        airText.text = "Air Left: " + ((int)air).ToString();
+        airText.text = "Air Left: " + (int) air;
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Water")
+        if (collision.tag == "Water")
         {
             inWater = true;
             if (air < maximumAir)
@@ -60,7 +53,7 @@ public class FishAir : MonoBehaviour
             }
         }
 
-        if(collision.tag == "Hazard")
+        if (collision.tag == "Hazard")
         {
             airDecrement = collision.gameObject.GetComponent<Hazard>().damage;
             inHazard = true;
@@ -70,12 +63,12 @@ public class FishAir : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.tag == "Water")
+        if (collision.tag == "Water")
         {
             inWater = false;
         }
 
-        if(collision.tag == "Hazard")
+        if (collision.tag == "Hazard")
         {
             inHazard = false;
         }

@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public class UnmovingHazard : Hazard {
 
-public class Hazard : MonoBehaviour
-{
-    public int damage;
 }
