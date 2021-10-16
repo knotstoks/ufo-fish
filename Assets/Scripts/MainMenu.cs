@@ -13,8 +13,11 @@ public class MainMenu : MonoBehaviour {
             Destroy(gameObject);
             return;
         }
+
+        StartCoroutine(FadeOut());
     }
     public void NextSceneButton(string sceneName) {
+        Debug.Log("HI");
         StartCoroutine(NextScene(sceneName));
     }
     public IEnumerator NextScene(string sceneName) {
