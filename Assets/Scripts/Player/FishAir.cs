@@ -13,6 +13,7 @@ public class FishAir : MonoBehaviour
     private float air;
     private float timer;
     private float airDecrement;
+    public float airScaling;
     private bool inWater = true;
     private bool inHazard = false;
 
@@ -27,7 +28,7 @@ public class FishAir : MonoBehaviour
     {
         if (!inWater)
         {
-            air -= Time.deltaTime;
+            air -= Time.deltaTime * airScaling;
         } else
         {
             if(air < maximumAir)

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5229552500115509544}
   - component: {fileID: 5229552500115509545}
   - component: {fileID: 5229552500115509540}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fish
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -154,3 +154,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maximumAir: 100
   damageTime: 0.05
+  airScaling: 4.5
