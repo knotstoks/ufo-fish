@@ -14,18 +14,17 @@ public class FishMovement : MonoBehaviour
     private Rigidbody2D rb;
     private float horizontal;
     private SpriteRenderer spriteRenderer;
-
-    // Start is called before the first frame update
+    private bool pressed;
     void Start()
     {  
+        pressed = false;
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
     private void Update()
     {
-        if(hit)
+        if (hit)
         {
             hitTimer -= Time.deltaTime;
             if(hitTimer < 0)
@@ -38,6 +37,12 @@ public class FishMovement : MonoBehaviour
         }
 
         horizontal = Input.GetAxisRaw("Horizontal");
+
+        if (Input.GetKeyDown(KeyCode.Space) && timer <= 0 && !hit)
+        {
+            timer = jumpDuration;
+            rb.velocity = Vector2.up * jumpForce;
+        }
 
         Vector3 characterScale = transform.localScale;
 
@@ -55,12 +60,6 @@ public class FishMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(horizontal * speed * Time.deltaTime, rb.velocity.y);
-        
-        if (Input.GetKey(KeyCode.Space) && timer <= 0 && !hit)
-        {
-            timer = jumpDuration;
-            rb.velocity = Vector2.up * jumpForce;
-        }
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
