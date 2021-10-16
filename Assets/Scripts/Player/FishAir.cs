@@ -55,19 +55,15 @@ public class FishAir : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Water")
+        if (collision.gameObject.CompareTag("Water"))
         {
             inWater = true;
-        }
-
-        if (collision.tag == "Hazard")
+        } else if (collision.gameObject.CompareTag("Hazard"))
         {
             airDecrement = collision.gameObject.GetComponent<Hazard>().damage;
             inHazard = true;
             timer = damageTime;
-        }
-
-        if(collision.tag == "Machine")
+        } else if (collision.gameObject.CompareTag("Machine"))
         {
             //Congratulations
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
