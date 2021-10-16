@@ -70,4 +70,6 @@ public class FishMovement : MonoBehaviour
             hitTimer = hitDuration;
         }
     }
+
+
 }

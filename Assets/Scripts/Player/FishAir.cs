@@ -48,7 +48,7 @@ public class FishAir : MonoBehaviour
 
         if (air < 0)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         image.fillAmount = air / 100;
     }
@@ -65,6 +65,12 @@ public class FishAir : MonoBehaviour
             airDecrement = collision.gameObject.GetComponent<Hazard>().damage;
             inHazard = true;
             timer = damageTime;
+        }
+
+        if(collision.tag == "Machine")
+        {
+            //Congratulations
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 

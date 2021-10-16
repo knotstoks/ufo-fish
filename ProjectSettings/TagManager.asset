@@ -7,6 +7,7 @@ TagManager:
   - Water
   - Hazard
   - AirMeter
+  - Machine
   layers:
   - Default
   - TransparentFX
