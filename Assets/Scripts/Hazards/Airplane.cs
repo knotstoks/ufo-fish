@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -5,7 +6,7 @@ public class Airplane : Hazard {
     [HideInInspector] public bool goingRight;
     [SerializeField] private float speed;
     private Rigidbody2D rb;
-    private void Start() {
+    private IEnumerator Start() {
         rb = GetComponent<Rigidbody2D>();
 
         if (goingRight) {
@@ -13,6 +14,10 @@ public class Airplane : Hazard {
             characterScale.x = -7;
             transform.localScale = characterScale;
         }
+
+        yield return new WaitForSeconds(5);
+
+        Destroy(gameObject);
     }
     private void FixedUpdate() {
         if (goingRight) {
