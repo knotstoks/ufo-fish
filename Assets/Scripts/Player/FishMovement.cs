@@ -8,16 +8,19 @@ public class FishMovement : MonoBehaviour
     public float speed;
     public float jumpDuration;
     public float hitDuration;
+    public AudioClip audioClip;
     private float timer;
     private float hitTimer;
     private bool hit = false;
     private Rigidbody2D rb;
     private float horizontal;
     private SpriteRenderer spriteRenderer;
+    private AudioSource audioSource;
     void Start()
     {  
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -38,6 +41,7 @@ public class FishMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && timer <= 0 && !hit)
         {
+            audioSource.PlayOneShot(audioClip);
             timer = jumpDuration;
             rb.velocity = Vector2.up * jumpForce;
         }
