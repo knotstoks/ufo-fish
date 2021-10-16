@@ -9,7 +9,6 @@ public class FishAir : MonoBehaviour
     
     public float maximumAir;
     public float damageTime;
-    public Text airText;
     public Image image;
     private float air;
     private float timer;
@@ -20,7 +19,7 @@ public class FishAir : MonoBehaviour
     void Start()
     {
         air = maximumAir;
-
+        image = GameObject.FindGameObjectWithTag("AirMeter").GetComponent<Image>();
     }
 
     // Update is called once per frame
@@ -36,7 +35,7 @@ public class FishAir : MonoBehaviour
                 air += 0.1f;
             }
         }
-
+        
         if (inHazard)
         {
             timer -= Time.deltaTime;
@@ -51,8 +50,6 @@ public class FishAir : MonoBehaviour
         {
             SceneManager.LoadScene(1);
         }
-
-        airText.text = "Air Left: " + (int) air;
         image.fillAmount = air / 100;
     }
 

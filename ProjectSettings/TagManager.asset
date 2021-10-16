@@ -6,14 +6,15 @@ TagManager:
   tags:
   - Water
   - Hazard
+  - AirMeter
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Hazard
   - Water
   - UI
-  - 
+  - User
   - 
   - 
   - 

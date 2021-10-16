@@ -7,7 +7,10 @@ public class FishMovement : MonoBehaviour
     public float jumpForce;
     public float speed;
     public float jumpDuration;
+    public float hitDuration;
     private float timer;
+    private float hitTimer;
+    private bool hit = false;
     private Rigidbody2D rb;
     private float horizontal;
     private SpriteRenderer spriteRenderer;
@@ -22,6 +25,14 @@ public class FishMovement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        if(hit)
+        {
+            hitTimer -= Time.deltaTime;
+            if(hitTimer < 0)
+            {
+                hit = false;
+            }
+        }
         if (timer > 0) {
             timer -= Time.deltaTime;
         }
@@ -45,10 +56,19 @@ public class FishMovement : MonoBehaviour
     {
         rb.velocity = new Vector2(horizontal * speed * Time.deltaTime, rb.velocity.y);
         
-        if (Input.GetKey(KeyCode.Space) && timer <= 0)
+        if (Input.GetKey(KeyCode.Space) && timer <= 0 && !hit)
         {
             timer = jumpDuration;
             rb.velocity = Vector2.up * jumpForce;
+        }
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Hazard")
+        {
+            hit = true;
+            hitTimer = hitDuration;
         }
     }
 }
