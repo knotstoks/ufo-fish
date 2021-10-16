@@ -5,19 +5,16 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour {
     [SerializeField] private Image blackScreen;
-    public static MainMenu instance;
+    [SerializeField] private GameObject instructionsOne;
+    [SerializeField] private GameObject instructionsTwo;
+    [SerializeField] private GameObject instructionsThree;
     private void Start() {
-        if (!instance) {
-            instance = this;
-        } else {
-            Destroy(gameObject);
-            return;
-        }
-
+        instructionsOne.SetActive(false);
+        instructionsTwo.SetActive(false);
+        instructionsThree.SetActive(false);
         StartCoroutine(FadeOut());
     }
     public void NextSceneButton(string sceneName) {
-        Debug.Log("HI");
         StartCoroutine(NextScene(sceneName));
     }
     public IEnumerator NextScene(string sceneName) {
@@ -40,5 +37,23 @@ public class MainMenu : MonoBehaviour {
             blackScreen.color = new Color(0, 0, 0,  (float) (1 - i));
             yield return new WaitForSeconds(0.04f);
         }
+    }
+
+    public void ShowInstructions() {
+        instructionsOne.SetActive(true);
+    }
+
+    public void ShowSecondInstruction() {
+        instructionsOne.SetActive(false);
+        instructionsTwo.SetActive(true);
+    }
+
+    public void ShowThirdInstruction() {
+        instructionsTwo.SetActive(false);
+        instructionsThree.SetActive(true);
+    }
+
+    public void BackToMainMenu() {
+        instructionsThree.SetActive(false);
     }
 }
