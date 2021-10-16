@@ -10,11 +10,18 @@ public class FishAir : MonoBehaviour
     public float maximumAir;
     public float damageTime;
     public Text airText;
+    public Image image;
     private float air;
     private float timer;
     private float airDecrement;
     private bool inWater = true;
     private bool inHazard = false;
+
+    void Start()
+    {
+        air = maximumAir;
+
+    }
 
     // Update is called once per frame
     void Update()
@@ -22,6 +29,12 @@ public class FishAir : MonoBehaviour
         if (!inWater)
         {
             air -= Time.deltaTime;
+        } else
+        {
+            if(air < maximumAir)
+            {
+                air += 0.1f;
+            }
         }
 
         if (inHazard)
@@ -40,6 +53,7 @@ public class FishAir : MonoBehaviour
         }
 
         airText.text = "Air Left: " + (int) air;
+        image.fillAmount = air / 100;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -47,10 +61,6 @@ public class FishAir : MonoBehaviour
         if (collision.tag == "Water")
         {
             inWater = true;
-            if (air < maximumAir)
-            {
-                air = maximumAir;
-            }
         }
 
         if (collision.tag == "Hazard")
@@ -73,6 +83,8 @@ public class FishAir : MonoBehaviour
             inHazard = false;
         }
     }
+
+
 
 
 }
