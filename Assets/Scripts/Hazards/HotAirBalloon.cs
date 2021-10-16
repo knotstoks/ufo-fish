@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Jellyfish : Hazard
+public class HotAirBalloon : Hazard
 {
     [SerializeField] private Vector2 upPos;
     [SerializeField] private Vector2 downPos;
