@@ -9,7 +9,7 @@ public class FishAir : MonoBehaviour
     
     public float maximumAir;
     public float damageTime;
-    public Image image;
+    private Image image;
     private float air;
     private float timer;
     private float airDecrement;

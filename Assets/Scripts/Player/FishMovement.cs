@@ -14,24 +14,22 @@ public class FishMovement : MonoBehaviour
     private Rigidbody2D rb;
     private float horizontal;
     private SpriteRenderer spriteRenderer;
-    private bool pressed;
     void Start()
     {  
-        pressed = false;
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
     {
-        if (hit)
-        {
-            hitTimer -= Time.deltaTime;
-            if(hitTimer < 0)
-            {
-                hit = false;
-            }
-        }
+        // if (hit)
+        // {
+        //     hitTimer -= Time.deltaTime;
+        //     if(hitTimer < 0)
+        //     {
+        //         hit = false;
+        //     }
+        // }
         if (timer > 0) {
             timer -= Time.deltaTime;
         }
@@ -64,11 +62,11 @@ public class FishMovement : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Hazard")
-        {
-            hit = true;
-            hitTimer = hitDuration;
-        }
+        // if(collision.gameObject.tag == "Hazard")
+        // {
+        //     hit = true;
+        //     hitTimer = hitDuration;
+        // }
     }
 
 
