@@ -45,4 +45,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meteorite: {fileID: 7377023542729958886, guid: c5be803661f9ca2448ef1eb029ca05d4, type: 3}
   movingTo: {x: 0, y: 0}
-  respawnTime: 0
+  respawnTime: 3
