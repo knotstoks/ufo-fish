@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour {
     [SerializeField] private GameObject instructionsTwo;
     [SerializeField] private GameObject instructionsThree;
     [SerializeField] private GameObject levelSelect;
+    [SerializeField] private GameObject fish;
     private void Start() {
         instructionsOne.SetActive(false);
         instructionsTwo.SetActive(false);
@@ -16,6 +17,7 @@ public class MainMenu : MonoBehaviour {
         StartCoroutine(FadeOut());
     }
     public void NextSceneButton(string sceneName) {
+        fish.SetActive(false);
         StartCoroutine(NextScene(sceneName));
     }
     public IEnumerator NextScene(string sceneName) {
@@ -41,6 +43,7 @@ public class MainMenu : MonoBehaviour {
     }
 
     public void ShowInstructions() {
+        fish.SetActive(false);
         instructionsOne.SetActive(true);
     }
 
@@ -56,10 +59,12 @@ public class MainMenu : MonoBehaviour {
 
     public void BackToMainMenu() {
         instructionsThree.SetActive(false);
+        fish.SetActive(true);
     }
 
     public void LevelSelect()
     {
+        fish.SetActive(levelSelect.activeSelf);
         levelSelect.SetActive(!levelSelect.activeSelf);
     }
 }

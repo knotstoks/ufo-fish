@@ -1,5 +1,5 @@
+using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameMenu : MonoBehaviour
@@ -27,22 +27,19 @@ public class GameMenu : MonoBehaviour
 
     public void Defeat()
     {
-        Time.timeScale = 0;
         isPaused = true;
         Menu.SetActive(true);
         Continue.SetActive(false);
         PauseText.SetActive(false);
         DefeatText.SetActive(true);
-
+        GameObject.FindGameObjectWithTag("Player").GetComponent<FishMovement>().defeat = true;
     }
 
     public void RetryButton()
     {
-        
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        Time.timeScale = 1;
         Menu.SetActive(false);
         isPaused = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void QuitButton()

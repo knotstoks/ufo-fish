@@ -69,7 +69,7 @@ public class FishAir : MonoBehaviour
         } else if (collision.gameObject.CompareTag("Machine"))
         {
             //Congratulations
-            if (SceneManager.GetActiveScene().buildIndex < 6)
+            if (SceneManager.GetActiveScene().buildIndex < 7)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             } 

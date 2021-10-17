@@ -9,6 +9,7 @@ public class FishMovement : MonoBehaviour
     public float jumpDuration;
     public float hitDuration;
     public AudioClip audioClip;
+    public bool defeat;
     private float timer;
     private float hitTimer;
     private bool hit = false;
@@ -39,7 +40,7 @@ public class FishMovement : MonoBehaviour
 
         horizontal = Input.GetAxisRaw("Horizontal");
 
-        if (Input.GetKeyDown(KeyCode.Space) && timer <= 0 && !hit)
+        if (Input.GetKeyDown(KeyCode.Space) && timer <= 0 && !hit && !defeat)
         {
             audioSource.PlayOneShot(audioClip);
             timer = jumpDuration;
