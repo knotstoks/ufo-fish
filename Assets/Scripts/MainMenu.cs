@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour {
     [SerializeField] private GameObject instructionsOne;
     [SerializeField] private GameObject instructionsTwo;
     [SerializeField] private GameObject instructionsThree;
+    [SerializeField] private GameObject levelSelect;
     private void Start() {
         instructionsOne.SetActive(false);
         instructionsTwo.SetActive(false);
@@ -55,5 +56,10 @@ public class MainMenu : MonoBehaviour {
 
     public void BackToMainMenu() {
         instructionsThree.SetActive(false);
+    }
+
+    public void LevelSelect()
+    {
+        levelSelect.SetActive(!levelSelect.activeSelf);
     }
 }
