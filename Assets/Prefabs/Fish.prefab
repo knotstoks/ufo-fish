@@ -120,7 +120,7 @@ MonoBehaviour:
   speed: 125
   jumpDuration: 0.3
   hitDuration: 1
-  audioClip: {fileID: 8300000, guid: 644bc110ec63b6e4d88ff5d8f9c92d48, type: 3}
+  audioClip: {fileID: 8300000, guid: ccd08e758166e4a45b961c8996ec9807, type: 3}
 --- !u!50 &5229552500115509545
 Rigidbody2D:
   serializedVersion: 4
@@ -156,6 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maximumAir: 100
   damageTime: 0.05
+  manager: {fileID: 0}
   airScaling: 4.5
 --- !u!82 &4005756374768761076
 AudioSource:
@@ -167,7 +168,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 644bc110ec63b6e4d88ff5d8f9c92d48, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ccd08e758166e4a45b961c8996ec9807, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
