@@ -27,7 +27,9 @@ public class GameMenu : MonoBehaviour
 
     public void Defeat()
     {
-        Display();
+        Time.timeScale = 0;
+        isPaused = true;
+        Menu.SetActive(true);
         Continue.SetActive(false);
         PauseText.SetActive(false);
         DefeatText.SetActive(true);
@@ -36,12 +38,16 @@ public class GameMenu : MonoBehaviour
 
     public void RetryButton()
     {
+        
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        Display();
+        Time.timeScale = 1;
+        Menu.SetActive(false);
+        isPaused = false;
     }
 
     public void QuitButton()
     {
+        Display();
         SceneManager.LoadScene(0);
     }
 

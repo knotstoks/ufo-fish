@@ -123,6 +123,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &40557947
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 708758169}
+    m_Modifications:
+    - target: {fileID: 1689681624222118325, guid: dd2336f713b19c64f891169acd2991d3, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689681624222118325, guid: dd2336f713b19c64f891169acd2991d3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.7869077
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689681624222118325, guid: dd2336f713b19c64f891169acd2991d3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -9.230686
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689681624222118325, guid: dd2336f713b19c64f891169acd2991d3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 102.16478
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689681624222118325, guid: dd2336f713b19c64f891169acd2991d3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689681624222118325, guid: dd2336f713b19c64f891169acd2991d3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689681624222118325, guid: dd2336f713b19c64f891169acd2991d3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689681624222118325, guid: dd2336f713b19c64f891169acd2991d3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689681624222118325, guid: dd2336f713b19c64f891169acd2991d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689681624222118325, guid: dd2336f713b19c64f891169acd2991d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689681624222118325, guid: dd2336f713b19c64f891169acd2991d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689681624222118331, guid: dd2336f713b19c64f891169acd2991d3, type: 3}
+      propertyPath: m_Name
+      value: Water Tank 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dd2336f713b19c64f891169acd2991d3, type: 3}
 --- !u!1 &41812639
 GameObject:
   m_ObjectHideFlags: 0
@@ -1567,6 +1624,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e86084ad9c60ca9468304ed633453ba1, type: 3}
+--- !u!4 &629800792 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1689681624222118325, guid: dd2336f713b19c64f891169acd2991d3, type: 3}
+  m_PrefabInstance: {fileID: 1073728292}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &630871861 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5815330986373010900, guid: d85bb9efbb30bed47b12ce9aa4c320fd, type: 3}
@@ -1685,7 +1747,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5229552500115509540, guid: 0db13225d0ec13341941ba9da9c748ef, type: 3}
       propertyPath: airScaling
-      value: 3
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 5229552500115509541, guid: 0db13225d0ec13341941ba9da9c748ef, type: 3}
       propertyPath: m_RootOrder
@@ -1755,6 +1817,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 74916742976413878, guid: e86084ad9c60ca9468304ed633453ba1, type: 3}
   m_PrefabInstance: {fileID: 646579654}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &708758168
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 708758169}
+  m_Layer: 0
+  m_Name: Water tank
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &708758169
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708758168}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.2554374, y: 39.208843, z: -102.16478}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 629800792}
+  - {fileID: 1568235632}
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &782103396
 Transform:
   m_ObjectHideFlags: 0
@@ -2215,6 +2309,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 74916742976413878, guid: e86084ad9c60ca9468304ed633453ba1, type: 3}
   m_PrefabInstance: {fileID: 1053513218}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1073728292
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 708758169}
+    m_Modifications:
+    - target: {fileID: 1689681624222118325, guid: dd2336f713b19c64f891169acd2991d3, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689681624222118325, guid: dd2336f713b19c64f891169acd2991d3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -19.026388
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689681624222118325, guid: dd2336f713b19c64f891169acd2991d3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.3387146
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689681624222118325, guid: dd2336f713b19c64f891169acd2991d3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 102.16478
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689681624222118325, guid: dd2336f713b19c64f891169acd2991d3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689681624222118325, guid: dd2336f713b19c64f891169acd2991d3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689681624222118325, guid: dd2336f713b19c64f891169acd2991d3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689681624222118325, guid: dd2336f713b19c64f891169acd2991d3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689681624222118325, guid: dd2336f713b19c64f891169acd2991d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689681624222118325, guid: dd2336f713b19c64f891169acd2991d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689681624222118325, guid: dd2336f713b19c64f891169acd2991d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689681624222118331, guid: dd2336f713b19c64f891169acd2991d3, type: 3}
+      propertyPath: m_Name
+      value: Water Tank 1 (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dd2336f713b19c64f891169acd2991d3, type: 3}
 --- !u!1001 &1091628690
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3216,6 +3367,11 @@ Transform:
   m_Father: {fileID: 315196260}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1568235632 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1689681624222118325, guid: dd2336f713b19c64f891169acd2991d3, type: 3}
+  m_PrefabInstance: {fileID: 40557947}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1596117182
 GameObject:
   m_ObjectHideFlags: 0
