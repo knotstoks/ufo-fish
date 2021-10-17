@@ -1,11 +1,16 @@
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameMenu : MonoBehaviour
 {
     public GameObject Menu;
+    public GameObject Continue;
+    public GameObject DefeatText;
+    public GameObject PauseText;
     bool isPaused = false;
 
-    public void Pause()
+    public void Display()
     {
         if (!isPaused)
         {
@@ -20,11 +25,33 @@ public class GameMenu : MonoBehaviour
         }
     }
 
+    public void Defeat()
+    {
+        Display();
+        Continue.SetActive(false);
+        PauseText.SetActive(false);
+        DefeatText.SetActive(true);
+
+    }
+
+    public void RetryButton()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Display();
+    }
+
+    public void QuitButton()
+    {
+        SceneManager.LoadScene(0);
+    }
+
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.P) && !DefeatText.activeSelf)
         {
-            Pause();
+            Display();
         }
     }
+
+
 }
