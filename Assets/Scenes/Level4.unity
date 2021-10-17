@@ -1535,6 +1535,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4005756374768761076, guid: 0db13225d0ec13341941ba9da9c748ef, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5229552500115509540, guid: 0db13225d0ec13341941ba9da9c748ef, type: 3}
       propertyPath: airScaling
       value: 3
@@ -1583,6 +1587,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5229552500115509546, guid: 0db13225d0ec13341941ba9da9c748ef, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5229552500115509550, guid: 0db13225d0ec13341941ba9da9c748ef, type: 3}
       propertyPath: m_Name
       value: Fish
@@ -1591,7 +1599,12 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7357467496164877172, guid: 0db13225d0ec13341941ba9da9c748ef, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7357467496164877172, guid: 0db13225d0ec13341941ba9da9c748ef, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0db13225d0ec13341941ba9da9c748ef, type: 3}
 --- !u!4 &676331690 stripped
 Transform:

@@ -33,7 +33,7 @@ public class FishAir : MonoBehaviour
         {
             if(air < maximumAir)
             {
-                air += 0.1f;
+                air += 0.3f;
             }
         }
         

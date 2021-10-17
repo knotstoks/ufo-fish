@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3501728674091901746}
   m_Layer: 0
   m_Name: Airplane
-  m_TagString: Untagged
+  m_TagString: Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8de66ac8951fb64695b00b0270c3e56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
+  damage: 1
   force: 0.05
   goingRight: 0
   speed: 6
