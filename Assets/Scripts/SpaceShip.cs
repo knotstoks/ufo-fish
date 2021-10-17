@@ -5,10 +5,10 @@ public class SpaceShip : Hazard
     public Transform center;
     public float speed;
     public bool clockwise;
+    public Vector2 offset;
     private Rigidbody2D rb;
     private float radius;
     private float time = 0f;
-    private Vector2 v;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +31,7 @@ public class SpaceShip : Hazard
 
     private void FixedUpdate()
     {
-        rb.MovePosition((Vector2) center.position + new Vector2(radius*Mathf.Cos(time), radius * Mathf.Sin(time)));
+        rb.MovePosition((Vector2) center.position + new Vector2(radius*Mathf.Cos(time), radius * Mathf.Sin(time)) + offset);
        
     }
 }
