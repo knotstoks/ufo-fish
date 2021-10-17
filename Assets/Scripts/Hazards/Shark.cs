@@ -28,7 +28,7 @@ public class Shark : Hazard {
         if (goingRight) {
             characterScale.x = originalSize;
         } else {
-            characterScale.x = -1*originalSize;
+            characterScale.x = -1 * originalSize;
         }
 
         if (rb.velocity.magnitude != 0) {
